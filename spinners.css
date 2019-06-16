@@ -1,0 +1,147 @@
+.loader-container {
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  margin: 2em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+/*
+  SIMPLE SPINNER
+*/
+@-webkit-keyframes dot-grow {
+  0% {
+    max-width: 0;
+    max-height: 0;
+  }
+  50% {
+    max-width: 8px;
+    max-height: 8px;
+  }
+  100% {
+    max-width: 0;
+    max-height: 0;
+  }
+}
+@keyframes dot-grow {
+  0% {
+    max-width: 0;
+    max-height: 0;
+  }
+  50% {
+    max-width: 8px;
+    max-height: 8px;
+  }
+  100% {
+    max-width: 0;
+    max-height: 0;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.simple-spinner {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  display: inline-block;
+}
+
+.simple-spinner .dot {
+  width: 8px;
+  height: 8px;
+  background: url(./img/circle.svg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  border-radius: 100%;
+  top: 0;
+  left: 5%;
+}
+
+.simple-spinner .dot:first-child, .simple-spinner .dot:nth-child(4) {
+  left: calc(50% - 4px);
+}
+
+.simple-spinner .dot:nth-child(4) {
+  top: calc(100% - 8px);
+}
+
+.simple-spinner .dot:nth-child(2), .simple-spinner .dot:nth-child(3) {
+  left: calc(100% - 8px);
+}
+
+.simple-spinner .dot:nth-child(2), .simple-spinner .dot:nth-child(6) {
+  top: calc(25% - 3.2px);
+}
+
+.simple-spinner .dot:nth-child(3), .simple-spinner .dot:nth-child(5) {
+  top: calc(75% - 3.2px);
+}
+
+.simple-spinner .dot:nth-child(2) {
+  -webkit-animation-delay: .20s;
+          animation-delay: .20s;
+}
+
+.simple-spinner .dot:nth-child(3) {
+  -webkit-animation-delay: .40s;
+          animation-delay: .40s;
+}
+
+.simple-spinner .dot:nth-child(4) {
+  -webkit-animation-delay: .60s;
+          animation-delay: .60s;
+}
+
+.simple-spinner .dot:nth-child(5) {
+  -webkit-animation-delay: .80s;
+          animation-delay: .80s;
+}
+
+.simple-spinner .dot:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.simple-spinner:not(.rotate) .dot {
+  -webkit-animation-name: dot-grow;
+          animation-name: dot-grow;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.simple-spinner.rotate {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  padding: 5px;
+}
+/*# sourceMappingURL=spinners.css.map */

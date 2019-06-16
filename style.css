@@ -1,0 +1,11 @@
+body {
+  font-size: 14px;
+}
+
+.divider {
+  height: 30px;
+  width: 1px;
+  background-color: black;
+  margin: 0 1em;
+  display: inline-block;
+}
