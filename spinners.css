@@ -92,11 +92,11 @@
 }
 
 .simple-spinner .dot:nth-child(2), .simple-spinner .dot:nth-child(6) {
-  top: calc(25% - 3.2px);
+  top: calc(25% + 5.33333px);
 }
 
 .simple-spinner .dot:nth-child(3), .simple-spinner .dot:nth-child(5) {
-  top: calc(75% - 3.2px);
+  top: calc(75% - 5.33333px);
 }
 
 .simple-spinner .dot:nth-child(2) {
